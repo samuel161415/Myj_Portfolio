@@ -31,7 +31,7 @@ function Contact() {
       <div className="c-wrapper">
         <div className="c-left">
            <h1 className="c-title">
-             Let's discuss your project
+             Let's discuss My project
            </h1>
           <div className="c-info">
             <div className="c-info-item">
@@ -47,7 +47,7 @@ function Contact() {
         </div>
         <div className="c-right">
          <p className="c-desc">
-          <b>What is My story?</b> Well I am hardwoker and smart
+          <b>Or email me : </b> Just send me a message here
          </p>
          <form ref={formRef} onSubmit={handleSubmit}>
             <input type="text" placeholder='Name' name='user_name' style={{backgroundColor:darkMode&&'#333'}}/>
