@@ -1,0 +1,47 @@
+
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+from collections import defaultdict
+from collections import deque
+
+vert,edge=map(int,input())
+start,dist=map(int,input())
+graph=defaultdict(list)
+
+for i in range(edge):
+    v1,v2=map(int,input())
+    graph[vl].append(v2)
+    graph[v2].append(v1)
+    
+visited=set()
+queue=deque()
+pushed_by={}
+path=[]
+
+def pathFinder(pushed_by,dist)->list:
+    path=[]
+    while dist in pushed_by:
+        path.append(dist)
+        dist=pushed_by[dist]
+    return path
+
+queue.append(start)
+visited.add(start)
+    
+while queue:
+    for i in range(len(queue)):
+        node=queue.popleft()
+        if node==dist:
+            path=pathFinder(pushed_by,dist)
+            
+            # pathFinder
+        for nebr in graph[node]:
+            queue.append(nebr)
+            visited.add(nebr)
+            pushed_by[nebr]=node
+            
+print(len(path))
+print(''.join(path))
+        
+        

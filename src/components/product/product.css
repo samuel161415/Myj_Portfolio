@@ -24,7 +24,7 @@
 .p-img{
    width: 100%;
    object-fit: cover;
-   transition: all ease 20s;
+   transition: all ease 30s;
 } 
 .p:hover .p-img{
     transform: translateY(-100%);
